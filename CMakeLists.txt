@@ -24,7 +24,7 @@ FetchContent_Declare(JUCE
     GIT_TAG 8.0.6 GIT_SHALLOW TRUE)
 FetchContent_Declare(ARA
     GIT_REPOSITORY https://github.com/Celemony/ARA_SDK.git
-    GIT_TAG a2b1aac1d1d5c4eed387db85a9c0cdb7d460254c
+    GIT_TAG de1ad0d1d23388047449ef4ff0f57122f218db96
     GIT_SUBMODULES ARA_API ARA_Library
     GIT_SUBMODULES_RECURSE TRUE)
 FetchContent_MakeAvailable(JUCE ARA)

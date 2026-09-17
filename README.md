@@ -96,7 +96,7 @@ bash scripts/build-mac.sh
 Dependências buscadas pelo CMake:
 
 - JUCE 8.0.6, tag fixada.
-- ARA SDK, commit `a2b1aac1d1d5c4eed387db85a9c0cdb7d460254c`, incluindo ARA_API e ARA_Library.
+- ARA SDK, commit `de1ad0d1d23388047449ef4ff0f57122f218db96`, incluindo ARA_API e ARA_Library.
 
 Não se instala nem se substitui nenhum plugin automaticamente. O resultado pretendido é:
 `build/SyllableLeveler_artefacts/Release/AU/Syllable Leveler.component`.
