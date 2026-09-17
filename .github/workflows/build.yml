@@ -29,6 +29,11 @@ jobs:
           codesign --verify --strict "$component"
           mkdir -p "$HOME/Library/Audio/Plug-Ins/Components"
           ditto "$component" "$HOME/Library/Audio/Plug-Ins/Components/Syllable Leveler.component"
+          /usr/libexec/PlistBuddy -c 'Print :AudioComponents' "$component/Contents/Info.plist"
+          # The runner may have cached its Audio Unit list before the copy.
+          killall -9 AudioComponentRegistrar 2>/dev/null || true
+          sleep 2
+          /usr/bin/auval -a
           /usr/bin/auval -v aufx Sylv Zivk
       - name: Package component (development build, not notarized)
         run: ditto -c -k --sequesterRsrc --keepParent 'build/SyllableLeveler_artefacts/Release/AU/Syllable Leveler.component' SyllableLeveler-AU-development.zip
